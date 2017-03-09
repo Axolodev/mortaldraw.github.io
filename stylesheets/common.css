@@ -1,0 +1,11 @@
+.header {
+    margin: 0;
+    padding: 0;
+    padding-bottom: 0.2em;
+    padding-top: 0.2em;
+    background-color: gray;
+}
+
+footer.footer {
+    background-color: lightgray;
+}

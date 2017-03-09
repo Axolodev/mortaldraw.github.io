@@ -1,0 +1,86 @@
+# HTML is supported in descriptions
+# Markdown is supported in descriptions
+
+- name: Graphical User Interface
+  description: This is the graphical user interface. Without one of these the system boots into the command line. It is usually enough to install one of these.
+  software:
+  # examples see
+  # http://askubuntu.com/questions/2093/how-to-install-gui-desktop-on-a-server#2096
+  - name: Ubuntu
+    id: ubuntu-desktop
+    packages:
+    - ubuntu-desktop
+    disk: xxxMB
+  - name: Kubuntu
+    id: kubuntu-desktop
+    packages:
+    - kubuntu-desktop
+    disk: xxxMB
+  - name: Gnome
+    id: gnome-desktop
+    packages:
+    - ubuntu-gnome-desktop
+    disk: xxxMB
+  - name: Xubuntu
+    id: xubuntu-desktop
+    packages:
+    - xubuntu-desktop
+    disk: xxxMB
+  - name: Lubuntu
+    id: lubuntu-desktop
+    packages:
+    - lubuntu-desktop
+    disk: xxxMB
+  - name: Edubuntu
+    id: edubuntu-desktop
+    packages:
+    - edubuntu-desktop
+    disk: xxxMB
+  # other desktops
+  - name: Mate
+    id: mate
+    packages:
+    - mate-desktop-environment-core
+    disk: xxxMB
+  - name: Busybox
+    id: busybox
+    disk: xxMB
+    packages:
+    - busybox
+
+- name: Programming
+  software:
+  - name: App Inventor Starter
+    id: aistarter
+    description: "The App Inventor Starter Software executes the App Inventor Companion on the computer so that no additional Android device is required."
+#      de: "Die App Inventor Starter Software führt App Inventor Companion auf dem Computer aus, sodass kein mobiles Gerät benötigt wird."
+    script: aistarter.sh
+
+  - name: Arduino
+    id: arduino
+    description: "The Arduino development environment."
+    script: arduino.sh
+    
+- name: Web Browser
+  description: You may need Browsers to access the Internet.
+  software:
+  - name: Firefox
+    id: firefox
+    packages:
+    - firefox
+  - name: Chromium
+    id: chromium
+    packages: 
+  - name: Google Chrome
+    id: chrome
+    packages: 
+  - name: Opera
+    id: opera
+    command: opera.sh
+
+- name: hidden
+  desciption: This will be executed either way.
+  software:
+  - name: Build ISO Image
+    id: iso-build
+    command: "#!/bin/bash\n/toiso/command.sh -q\n"
